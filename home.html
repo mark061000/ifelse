@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Home</title>
+	<link rel="stylesheet" href="style.css" />
+</head>
+
+<script>
+	function logout(){
+		let response = confirm("are you sure you want to log out?");
+		
+		if(response){
+
+
+	    	window.close('home.html');
+		    window.open('index.html');
+		}
+	}
+</script>
+</body>
+		<h1>WELCOME TO HOME PAGE</h1>
+      <button type ="submit" onclick="logout()"> logout </button>
+           <div class="div1">
+        <h2>  MY GAMEFOWL</h2>
+        <p>Enter Num1</p>
+        <input type="number" id="num1" name="num1">
+        <p>Enter Num2</p>
+        <input type="number" id="num2" name="num2">
+        <button type="button" onclick="dancing()">Play</button>
+            
+        <img id="dance" src="war.gif">
+
+        <script>
+            function dancing() {
+                var image = document.getElementById('dance');
+                let num1 = parseInt(document.getElementById("num1").value);
+                let num2 = parseInt(document.getElementById("num2").value);
+                let sum = num1 + num2;
+                
+                if (sum >= 100) {
+                    image.src = "woow.gif";
+                } else {
+                    image.src = "tsk.gif";
+                }
+            }
+            </script>
+
+</html>
